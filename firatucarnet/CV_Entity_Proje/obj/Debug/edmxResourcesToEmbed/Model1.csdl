@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="firatuca_Db_Cv_EntityModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Tbl_Deneyim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirmaAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pozisyon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Süre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Açıklama" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_Hakkimda">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Bilgiler" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Egitim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_İletisim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Adsoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Mesaj" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Konu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_Yetenek">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Yetenek" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Derece" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="firatuca_Db_Cv_EntityEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tbl_Deneyim" EntityType="Self.Tbl_Deneyim" />
+    <EntitySet Name="Tbl_Hakkimda" EntityType="Self.Tbl_Hakkimda" />
+    <EntitySet Name="Tbl_İletisim" EntityType="Self.Tbl_İletisim" />
+    <EntitySet Name="Tbl_Yetenek" EntityType="Self.Tbl_Yetenek" />
+  </EntityContainer>
+</Schema>

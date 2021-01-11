@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="firatuca_Db_Cv_EntityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Tbl_Deneyim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirmaAd" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pozisyon" Type="nvarchar" MaxLength="50" />
+          <Property Name="Süre" Type="nvarchar" MaxLength="50" />
+          <Property Name="Açıklama" Type="nvarchar" MaxLength="550" />
+        </EntityType>
+        <EntityType Name="Tbl_Hakkimda">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Bilgiler" Type="nvarchar" MaxLength="500" />
+          <Property Name="Egitim" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Tbl_İletisim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Adsoyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mesaj" Type="nvarchar" MaxLength="500" />
+          <Property Name="Konu" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Tbl_Yetenek">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Yetenek" Type="nvarchar" MaxLength="50" />
+          <Property Name="Derece" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="firatuca_Db_Cv_EntityModelStoreContainer">
+          <EntitySet Name="Tbl_Deneyim" EntityType="Self.Tbl_Deneyim" Schema="firatuca_firatucar94" store:Type="Tables" />
+          <EntitySet Name="Tbl_Hakkimda" EntityType="Self.Tbl_Hakkimda" Schema="firatuca_firatucar94" store:Type="Tables" />
+          <EntitySet Name="Tbl_İletisim" EntityType="Self.Tbl_İletisim" Schema="firatuca_firatucar94" store:Type="Tables" />
+          <EntitySet Name="Tbl_Yetenek" EntityType="Self.Tbl_Yetenek" Schema="firatuca_firatucar94" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="firatuca_Db_Cv_EntityModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Tbl_Deneyim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirmaAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pozisyon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Süre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Açıklama" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tbl_Hakkimda">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Bilgiler" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Egitim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tbl_İletisim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Adsoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mesaj" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Konu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tbl_Yetenek">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Yetenek" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Derece" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="firatuca_Db_Cv_EntityEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Tbl_Deneyim" EntityType="Self.Tbl_Deneyim" />
+          <EntitySet Name="Tbl_Hakkimda" EntityType="Self.Tbl_Hakkimda" />
+          <EntitySet Name="Tbl_İletisim" EntityType="Self.Tbl_İletisim" />
+          <EntitySet Name="Tbl_Yetenek" EntityType="Self.Tbl_Yetenek" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="firatuca_Db_Cv_EntityModelStoreContainer" CdmEntityContainer="firatuca_Db_Cv_EntityEntities">
+          <EntitySetMapping Name="Tbl_Deneyim">
+            <EntityTypeMapping TypeName="firatuca_Db_Cv_EntityModel.Tbl_Deneyim">
+              <MappingFragment StoreEntitySet="Tbl_Deneyim">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirmaAd" ColumnName="FirmaAd" />
+                <ScalarProperty Name="Pozisyon" ColumnName="Pozisyon" />
+                <ScalarProperty Name="Süre" ColumnName="Süre" />
+                <ScalarProperty Name="Açıklama" ColumnName="Açıklama" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Hakkimda">
+            <EntityTypeMapping TypeName="firatuca_Db_Cv_EntityModel.Tbl_Hakkimda">
+              <MappingFragment StoreEntitySet="Tbl_Hakkimda">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Bilgiler" ColumnName="Bilgiler" />
+                <ScalarProperty Name="Egitim" ColumnName="Egitim" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_İletisim">
+            <EntityTypeMapping TypeName="firatuca_Db_Cv_EntityModel.Tbl_İletisim">
+              <MappingFragment StoreEntitySet="Tbl_İletisim">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Adsoyad" ColumnName="Adsoyad" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Mesaj" ColumnName="Mesaj" />
+                <ScalarProperty Name="Konu" ColumnName="Konu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Yetenek">
+            <EntityTypeMapping TypeName="firatuca_Db_Cv_EntityModel.Tbl_Yetenek">
+              <MappingFragment StoreEntitySet="Tbl_Yetenek">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Yetenek" ColumnName="Yetenek" />
+                <ScalarProperty Name="Derece" ColumnName="Derece" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

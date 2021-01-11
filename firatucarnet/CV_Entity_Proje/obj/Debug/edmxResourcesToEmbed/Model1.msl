@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="firatuca_Db_Cv_EntityModelStoreContainer" CdmEntityContainer="firatuca_Db_Cv_EntityEntities">
+    <EntitySetMapping Name="Tbl_Deneyim">
+      <EntityTypeMapping TypeName="firatuca_Db_Cv_EntityModel.Tbl_Deneyim">
+        <MappingFragment StoreEntitySet="Tbl_Deneyim">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirmaAd" ColumnName="FirmaAd" />
+          <ScalarProperty Name="Pozisyon" ColumnName="Pozisyon" />
+          <ScalarProperty Name="Süre" ColumnName="Süre" />
+          <ScalarProperty Name="Açıklama" ColumnName="Açıklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Hakkimda">
+      <EntityTypeMapping TypeName="firatuca_Db_Cv_EntityModel.Tbl_Hakkimda">
+        <MappingFragment StoreEntitySet="Tbl_Hakkimda">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Bilgiler" ColumnName="Bilgiler" />
+          <ScalarProperty Name="Egitim" ColumnName="Egitim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_İletisim">
+      <EntityTypeMapping TypeName="firatuca_Db_Cv_EntityModel.Tbl_İletisim">
+        <MappingFragment StoreEntitySet="Tbl_İletisim">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Adsoyad" ColumnName="Adsoyad" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Mesaj" ColumnName="Mesaj" />
+          <ScalarProperty Name="Konu" ColumnName="Konu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Yetenek">
+      <EntityTypeMapping TypeName="firatuca_Db_Cv_EntityModel.Tbl_Yetenek">
+        <MappingFragment StoreEntitySet="Tbl_Yetenek">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Yetenek" ColumnName="Yetenek" />
+          <ScalarProperty Name="Derece" ColumnName="Derece" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
